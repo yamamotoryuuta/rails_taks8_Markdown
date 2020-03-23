@@ -1,0 +1,27 @@
+<%
+  text = <<~TEXT
+    # 大見出し
+    ## 中見出し
+    ### 小見出し
+
+    ```rb
+    puts "hello world"
+    ```
+    TEXT
+
+  text_sample = <<~TEXT
+    ___
+    - list親
+        - list子
+            - list孫
+
+    #### 小小見出し
+    ##### もっと小さい見出し
+
+    文章**強調**
+    ___
+    TEXT
+%>
+
+<%= markdown(text).html_safe %>
+<%= markdown(text_sample).html_safe %>
